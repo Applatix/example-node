@@ -9,7 +9,7 @@ container:
     cpu_cores: 0.3
   image: "node:argon"
   docker_options: ""
-  command: "sh -c 'cd /src && ls -ltr && docker build -t dinardalvi/node-app . && docker tag dinardalvi/node-app && docker login -u dinardalvi -p Test1234!@#$ hub.docker.com && docker push dinardalvi/node-app:'"
+  command: "sh -c 'cd /src && ls -ltr && docker build -t dinardalvi/node-app . && docker tag dinardalvi/node-app dinardalvi/node-app:latest && docker login -u dinardalvi -p Test1234!@#$ hub.docker.com && docker push dinardalvi/node-app:'"
 inputs:
   artifacts:
   - from: "%%code%%"
