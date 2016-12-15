@@ -7,8 +7,8 @@ container:
   resources:
     mem_mib: 1024
     cpu_cores: 0.3
-  image: node:argon
-  docker_options:
+  image: "node:argon"
+  docker_options: ""
     #docker build -t dinardalvi/node-app:${BUILD_NUMBER} .
     #value: #docker tag dinardalvi/node-app:${BUILD_NUMBER} dinardalvi/node-app:latest
     #value: docker images
@@ -17,16 +17,14 @@ container:
     command: sh -c 'docker build -t dinardalvi/node-app . && docker tag dinardalvi/node-app:%%session.commit%% && docker login -u dinardalvi -p Test1234!@#$ hub.docker.com && docker push dinardalvi/node-app:%%session.commit%%'
     #  /src/build/build_devops.py -n %%namespace%% -v %%version%%'
 inputs:
-  parameters:
-    namespace:
-    version:
   artifacts:
-  - from: "%%service.checkout.code%%"
+  - from: "%%code%%"
     path: "/src"
   parameters:
-    checkout:
-    namespace:
-    version:
+    code:
 outputs:
+  artifacts:
+    binary:
+      path: "/src"
 labels:
     "ax_ea_docker_enable": "{ \"graph-storage-name\": \"devopsbuildstorage\", \"graph-storage-size\": \"10Gi\" }"
