@@ -1,7 +1,7 @@
 ---
 type: service_template
 subtype: container
-name: build-container-step
+name: axscm-build
 description: This is the base template for building Node component.
 container:
   resources:
