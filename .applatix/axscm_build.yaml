@@ -7,7 +7,7 @@ container:
   resources:
     mem_mib: 1024
     cpu_cores: 0.3
-  image: 
+  image: "node:argon"
   docker_options: ""
   command: "sh -c 'cd /src && docker login -u dinarapplatix -p Test1234!@#$ &&  docker build -t dinarapplatix/node-app . && docker push dinarapplatix/node-app:latest'"
 inputs:
