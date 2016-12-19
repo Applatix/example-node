@@ -16,29 +16,4 @@ steps:
     template: node-build
     parameters:
       code: "%%steps.checkout.code%%"
-  #test2:
-   # template: c-test
-    #parameters:
-     # code: "%%steps.checkout.code%%"
-      #binary: "%%steps.build.binary%%"
-  #test3:
-   # template: c-test
-    #parameters:
-     # code: "%%steps.checkout.code%%"
-      #binary: "%%steps.build.binary%%"
-  #test4:
-   # template: c-test
-    #parameters:
-     # code: "%%steps.checkout.code%%"
-      #binary: "%%steps.build.binary%%"
-  #test5:
-   # template: c-test
-    #parameters:
-     # code: "%%steps.checkout.code%%"
-      #binary: "%%steps.build.binary%%"
-#- release:
-#    template: example-release
-#    parameters:
-#      code: "%%steps.checkout.code%%"
-#      binary: "%%steps.build.binary%%"
-
+  
