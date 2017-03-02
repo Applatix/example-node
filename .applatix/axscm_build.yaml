@@ -9,12 +9,14 @@ container:
     cpu_cores: 0.3
   image: "node:argon"
   docker_options: ""
-  command: "sh -c 'cd /src && docker login -u dinarapplatix -p Test1234!@#$ &&  docker build -t dinarapplatix/node-app . && docker push dinarapplatix/node-app:latest'"
+  command: "sh -c 'cd /src && docker login -u dinarapplatix -p %%password%% &&  docker build -t dinarapplatix/node-app . && docker push dinarapplatix/node-app:latest'"
 inputs:
   artifacts:
   - from: "%%code%%"
     path: "/src"
   parameters:
+    password:
+      default: "enter pwd"
     commit:
       default: "%%session.commit%%"
     code:
