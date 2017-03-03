@@ -1,0 +1,38 @@
+---
+type: service_template
+subtype: workflow
+name: node-approval-workflow
+description: Workflow with approval
+
+inputs:
+  parameters:
+    commit:
+      default: "%%session.commit%%"
+    repo:
+      default: "%%session.repo%%"
+    required_approvals:
+      default: dinar@applatix.com
+    optional_approvals:
+      default: ""
+    number_of_optional_approvals_needed:
+      default: 0
+    timeout_in_minutes:
+      default: 15
+steps:
+-
+  checkout:
+    template: axscm-checkout
+-
+  build:
+    template: node-build
+    parameters:
+      code: "%%steps.checkout.code%%"
+-
+  deploy:
+    template: node-deploy-workflow
+    parameters:
+      code: "%%steps.checkout.code%%"  
+-
+  approval:
+    template: axapproval
+

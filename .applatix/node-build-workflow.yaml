@@ -1,7 +1,7 @@
 ---
 type: service_template
 subtype: workflow
-name: node-workflow
+name: node-build-workflow
 description: workflow example
 inputs:
   parameters:
