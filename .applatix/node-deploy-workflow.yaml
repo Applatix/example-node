@@ -47,15 +47,10 @@ type: service_template
 subtype: workflow
 name: node-deploy-workflow
 inputs:
-  parameters:
-    commit:
-      default: "%%session.commit%%"
-    repo:
-      default: "%%session.repo%%"
-    appname:
-      default: "node-app"
-    domain:
-      default: "demo.applatix.net"
+   appname:
+     default: "node-app"
+   domain:
+     default: "demo.applatix.net"
 steps:
   
   - deploy-node:

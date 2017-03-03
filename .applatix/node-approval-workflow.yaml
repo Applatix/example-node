@@ -13,7 +13,7 @@ inputs:
     required_approvals:
       default: dinar@applatix.com
     optional_approvals:
-      default: ""
+      default: " "
     number_of_optional_approvals_needed:
       default: 0
     timeout_in_minutes:
@@ -28,11 +28,12 @@ steps:
     parameters:
       code: "%%steps.checkout.code%%"
 -
+  approval:
+    template: axapproval
+-
   deploy:
     template: node-deploy-workflow
     parameters:
       code: "%%steps.checkout.code%%"  
--
-  approval:
-    template: axapproval
+
 
