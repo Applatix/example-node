@@ -2,6 +2,7 @@
 type: service_template
 subtype: container
 name: node-deployment-container
+description: This is the template to deploy Node.js application.
 container:
   resources:
     mem_mib: 1024
