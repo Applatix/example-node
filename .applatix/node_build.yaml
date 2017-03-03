@@ -25,4 +25,4 @@ outputs:
     binary:
       path: "/src"
 labels:
-    "ax_ea_docker_enable": '{ "graph-storage-name": "axbuildstorage", "graph-storage-size": "25Gi", "cpu_cores":"0.9", "mem_mib":"900"}'
+    "ax_ea_docker_enable": "{ \"graph-storage-name\": \"devopsbuildstorage\", \"graph-storage-size\": \"10Gi\" }"
