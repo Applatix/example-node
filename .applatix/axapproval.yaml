@@ -12,7 +12,7 @@ inputs:
     timeout_in_minutes:
 
 container:
-  image: get.applatix.io/axapproval:v2
+  image: get.applatix.io/axapproval:v2.0.1
   resources:
     mem_mib: 128
     cpu_cores: 0.01
