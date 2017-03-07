@@ -27,7 +27,7 @@ application:
 deployment:
   name: "node-deploy"
 scale:
-  min: 1
+  min: 2
 external_routes:
   - name: node-app
     dns_prefix:
