@@ -29,7 +29,7 @@ deployment:
 scale:
   min: 2
 external_routes:
-  - name: node-app
+  - name: "%%appname%%"
     dns_prefix:
     dns_domain: "%%domain%%"
     target_port: 80
