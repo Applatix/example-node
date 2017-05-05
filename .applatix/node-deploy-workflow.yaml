@@ -1,6 +1,5 @@
 ---
-type: service_template
-subtype: container
+type: container
 name: node-deployment-container
 description: This is the template to deploy Node.js application.
 container:
@@ -13,8 +12,7 @@ container:
 ---
    
 ---
-type: service_template
-subtype: deployment
+type: deployment
 name: deploy-node
 inputs:
   parameters:
@@ -43,8 +41,7 @@ containers:
         PROBE_CMD: sh -c 'ls -l /src'
 
 ---
-type: service_template
-subtype: workflow
+type: workflow
 name: node-deploy-workflow
 inputs:
    appname:

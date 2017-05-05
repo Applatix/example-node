@@ -1,6 +1,5 @@
 ---
-type: service_template
-subtype: workflow
+type: workflow
 name: node-approval-workflow
 description: Workflow with approval and deploy.
 

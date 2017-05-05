@@ -1,6 +1,5 @@
 ---
-type: service_template
-subtype: container
+type: container
 name: axapproval
 description: Get approvals
 

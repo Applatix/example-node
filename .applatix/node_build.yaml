@@ -1,6 +1,5 @@
 ---
-type: service_template
-subtype: container
+type: container
 name: node-build
 description: This is the template for building Node component.
 container:
